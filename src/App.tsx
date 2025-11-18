@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 const Thoughts = React.lazy(() => import("./pages/Thoughts"));
+const Quotes = React.lazy(() => import("./pages/Quotes"));
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -24,6 +25,14 @@ const App = () => (
             element={
               <Suspense fallback={<div className="p-12 text-center">Загрузка...</div>}>
                 <Thoughts />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/quotes" 
+            element={
+              <Suspense fallback={<div className="p-12 text-center">Загрузка...</div>}>
+                <Quotes />
               </Suspense>
             } 
           />

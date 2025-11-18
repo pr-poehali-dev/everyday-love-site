@@ -33,6 +33,9 @@ const Navbar = () => {
           <Link to="/gallery" className="hover:text-everyday-brown transition-colors">
             Галерея
           </Link>
+          <Link to="/quotes" className="hover:text-everyday-brown transition-colors">
+            Цитаты
+          </Link>
           <Link to="/thoughts" className="hover:text-everyday-brown transition-colors">
             Размышления
           </Link>
@@ -55,6 +58,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Галерея
+              </Link>
+              <Link
+                to="/quotes"
+                className="text-everyday-darkBrown hover:text-everyday-brown transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Цитаты
               </Link>
               <Link
                 to="/thoughts"
